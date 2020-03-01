@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/risc-seismic-bucuresti-web/static/css/main.3cb669cf.chunk.css",
-    "main.js": "/risc-seismic-bucuresti-web/static/js/main.3ae1b34c.chunk.js",
-    "main.js.map": "/risc-seismic-bucuresti-web/static/js/main.3ae1b34c.chunk.js.map",
+    "main.js": "/risc-seismic-bucuresti-web/static/js/main.74be8a29.chunk.js",
+    "main.js.map": "/risc-seismic-bucuresti-web/static/js/main.74be8a29.chunk.js.map",
     "runtime-main.js": "/risc-seismic-bucuresti-web/static/js/runtime-main.8f58ae60.js",
     "runtime-main.js.map": "/risc-seismic-bucuresti-web/static/js/runtime-main.8f58ae60.js.map",
     "static/js/2.1f2ed20c.chunk.js": "/risc-seismic-bucuresti-web/static/js/2.1f2ed20c.chunk.js",
     "static/js/2.1f2ed20c.chunk.js.map": "/risc-seismic-bucuresti-web/static/js/2.1f2ed20c.chunk.js.map",
     "index.html": "/risc-seismic-bucuresti-web/index.html",
-    "precache-manifest.c08a1131da9bb06ef7cee6a95f96a78d.js": "/risc-seismic-bucuresti-web/precache-manifest.c08a1131da9bb06ef7cee6a95f96a78d.js",
+    "precache-manifest.c7716c3aaa6664c24ac564a0c9165391.js": "/risc-seismic-bucuresti-web/precache-manifest.c7716c3aaa6664c24ac564a0c9165391.js",
     "service-worker.js": "/risc-seismic-bucuresti-web/service-worker.js",
     "static/css/main.3cb669cf.chunk.css.map": "/risc-seismic-bucuresti-web/static/css/main.3cb669cf.chunk.css.map",
     "static/js/2.1f2ed20c.chunk.js.LICENSE.txt": "/risc-seismic-bucuresti-web/static/js/2.1f2ed20c.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.8f58ae60.js",
     "static/js/2.1f2ed20c.chunk.js",
     "static/css/main.3cb669cf.chunk.css",
-    "static/js/main.3ae1b34c.chunk.js"
+    "static/js/main.74be8a29.chunk.js"
   ]
 }
