@@ -35,6 +35,7 @@ class Search extends Component {
         return (
             <div id="main">
                 <h1>Cautare rapida risc seismic Bucuresti</h1>
+                <h2>Daca nu se returneaza rezultate din prima, incercati din noi in 30 de secunde.</h2>
                 <form onSubmit={this.handleSearch}>
                     <input
                         name="address"
