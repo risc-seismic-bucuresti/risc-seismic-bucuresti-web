@@ -31,6 +31,9 @@ button {
     cursor: pointer;
     font-size: 18px;
 }
+#no-results {
+    margin-top: 80px
+}
 #items-container {
     grid-template-columns: auto auto auto;
     grid-column-gap: 10px;

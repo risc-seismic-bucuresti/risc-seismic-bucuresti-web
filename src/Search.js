@@ -5,7 +5,8 @@ class Search extends Component {
     state = {
         address: "",
         addressNumber: "",
-        items: []
+        items: [],
+        initial: true,
     };
 
     handleOnChange = (evt) => {
@@ -24,6 +25,7 @@ class Search extends Component {
         const searchUrl = `https://risc-seismic-bucuresti.herokuapp.com/routes?address=${address}&number=${addressNumber}`;
         fetch(searchUrl)
             .then(response => {
+                this.setState({initial: false})
                 return response.json();
             })
             .then(jsonData => {
@@ -56,6 +58,9 @@ class Search extends Component {
                     <button onClick={this.handleSearch}>Cauta</button>
                 </form>
 
+                <div id="no-results">
+                    {!this.state.initial && !this.state.items.length ? 'Nu am gasit rezultate.' : ''}
+                </div>
                 <div id="items-container">
                     {this.state.items.map((item, index) => (
                         <div className="single-item" key={index}>
