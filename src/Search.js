@@ -35,7 +35,9 @@ class Search extends Component {
         return (
             <div id="main">
                 <h1>Cautare rapida risc seismic Bucuresti</h1>
-                <h2>Daca nu se returneaza rezultate din prima, incercati din noi in 30 de secunde.</h2>
+                <small>Daca nu se returneaza rezultate din prima, incercati din noi in 30 de secunde.</small>
+                <small>Am investit fix 4 ore in proiectul asta. E departe de a fi perfect. Daca vad ca exista interes, mai investesc in el.</small>
+                <small>Pentru orice problema creati un tichet <a href="https://github.com/alexneamtu/risc-seismic-bucuresti-web/issues">aici</a></small>
                 <form onSubmit={this.handleSearch}>
                     <input
                         name="address"
