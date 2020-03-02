@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "856dd31b57e7da44bc3a4dccbc267af9",
+    "revision": "8e10de18d07a21aad65030a69270f21d",
     "url": "/risc-seismic-bucuresti-web/index.html"
   },
   {
