@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/risc-seismic-bucuresti-web/static/css/main.bae70e0e.chunk.css",
-    "main.js": "/risc-seismic-bucuresti-web/static/js/main.33c9fd0f.chunk.js",
-    "main.js.map": "/risc-seismic-bucuresti-web/static/js/main.33c9fd0f.chunk.js.map",
+    "main.css": "/risc-seismic-bucuresti-web/static/css/main.914fca5d.chunk.css",
+    "main.js": "/risc-seismic-bucuresti-web/static/js/main.b04f80b7.chunk.js",
+    "main.js.map": "/risc-seismic-bucuresti-web/static/js/main.b04f80b7.chunk.js.map",
     "runtime-main.js": "/risc-seismic-bucuresti-web/static/js/runtime-main.8f58ae60.js",
     "runtime-main.js.map": "/risc-seismic-bucuresti-web/static/js/runtime-main.8f58ae60.js.map",
-    "static/js/2.1f2ed20c.chunk.js": "/risc-seismic-bucuresti-web/static/js/2.1f2ed20c.chunk.js",
-    "static/js/2.1f2ed20c.chunk.js.map": "/risc-seismic-bucuresti-web/static/js/2.1f2ed20c.chunk.js.map",
+    "static/js/2.683018dc.chunk.js": "/risc-seismic-bucuresti-web/static/js/2.683018dc.chunk.js",
+    "static/js/2.683018dc.chunk.js.map": "/risc-seismic-bucuresti-web/static/js/2.683018dc.chunk.js.map",
     "index.html": "/risc-seismic-bucuresti-web/index.html",
-    "precache-manifest.fb234f8bd20d16be794171366753cc17.js": "/risc-seismic-bucuresti-web/precache-manifest.fb234f8bd20d16be794171366753cc17.js",
+    "precache-manifest.f29c7859a7339b3853465a575287dec2.js": "/risc-seismic-bucuresti-web/precache-manifest.f29c7859a7339b3853465a575287dec2.js",
     "service-worker.js": "/risc-seismic-bucuresti-web/service-worker.js",
-    "static/css/main.bae70e0e.chunk.css.map": "/risc-seismic-bucuresti-web/static/css/main.bae70e0e.chunk.css.map",
-    "static/js/2.1f2ed20c.chunk.js.LICENSE.txt": "/risc-seismic-bucuresti-web/static/js/2.1f2ed20c.chunk.js.LICENSE.txt"
+    "static/css/main.914fca5d.chunk.css.map": "/risc-seismic-bucuresti-web/static/css/main.914fca5d.chunk.css.map",
+    "static/js/2.683018dc.chunk.js.LICENSE.txt": "/risc-seismic-bucuresti-web/static/js/2.683018dc.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/risc-seismic-bucuresti-web/static/media/logo.4612253a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8f58ae60.js",
-    "static/js/2.1f2ed20c.chunk.js",
-    "static/css/main.bae70e0e.chunk.css",
-    "static/js/main.33c9fd0f.chunk.js"
+    "static/js/2.683018dc.chunk.js",
+    "static/css/main.914fca5d.chunk.css",
+    "static/js/main.b04f80b7.chunk.js"
   ]
 }

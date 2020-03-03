@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/risc-seismic-bucuresti-web/precache-manifest.fb234f8bd20d16be794171366753cc17.js"
+  "/risc-seismic-bucuresti-web/precache-manifest.f29c7859a7339b3853465a575287dec2.js"
 );
 
 self.addEventListener('message', (event) => {
