@@ -7,6 +7,7 @@ class Search extends Component {
         addressNumber: "",
         items: [],
         initial: true,
+        error: false,
     };
 
     handleOnChange = (evt) => {
@@ -22,6 +23,7 @@ class Search extends Component {
     };
 
     makeApiCall = (address, addressNumber) => {
+        this.setState({error: false})
         const searchUrl = `https://risc-seismic-bucuresti.herokuapp.com/routes?address=${address}&number=${addressNumber}`;
         fetch(searchUrl)
             .then(response => {
@@ -30,6 +32,8 @@ class Search extends Component {
             })
             .then(jsonData => {
                 this.setState({items: jsonData});
+            }).catch(() => {
+                this.setState({error: true});
             });
     };
 
@@ -60,6 +64,9 @@ class Search extends Component {
 
                 <div id="no-results">
                     {!this.state.initial && !this.state.items.length ? 'Nu am gasit rezultate.' : ''}
+                </div>
+                <div id="error">
+                    {this.state.error? 'Incercati din nou in 30 de secunde.' : ''}
                 </div>
                 <div id="items-container">
                     {this.state.items.map((item, index) => (
