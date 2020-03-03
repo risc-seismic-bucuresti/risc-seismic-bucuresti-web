@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "55108c23d653d11a0689a5926011f1c5",
+    "revision": "008de490b3306c66741638609d59f9da",
     "url": "/risc-seismic-bucuresti-web/index.html"
   },
   {
-    "revision": "9b8795daaef96cf77633",
-    "url": "/risc-seismic-bucuresti-web/static/css/main.d95b6455.chunk.css"
+    "revision": "8458d0e8674e2c53ffdf",
+    "url": "/risc-seismic-bucuresti-web/static/css/main.1605f35e.chunk.css"
   },
   {
     "revision": "c0f56657d6a7472a65fa",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/risc-seismic-bucuresti-web/static/js/2.683018dc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9b8795daaef96cf77633",
+    "revision": "8458d0e8674e2c53ffdf",
     "url": "/risc-seismic-bucuresti-web/static/js/main.b04f80b7.chunk.js"
   },
   {
