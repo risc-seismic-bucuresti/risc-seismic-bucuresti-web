@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import "./Search.css";
+import logo from './logo.svg';
 
 class Search extends Component {
     state = {
@@ -40,6 +41,7 @@ class Search extends Component {
     render() {
         return (
             <div id="main">
+                <img src={logo} className="App-logo" alt="logo" />
                 <h1>Cautare rapida risc seismic Bucuresti</h1>
                 <p>Din motive tehnice, serverul se opreste dupa 30 de minute de inactivitate. </p>
                 <p>Din acest motiv daca nu se returneaza rezultate din prima, incercati din noi in 30 de secunde.</p>
