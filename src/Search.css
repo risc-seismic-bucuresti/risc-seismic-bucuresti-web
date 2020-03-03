@@ -17,12 +17,13 @@ h1 {
 }
 input {
     width: 100%;
-    margin: 10px;
+    margin: 10px 0;
     padding: 18px 10px;
     border-radius: 4px;
     border: 1px solid #4e5766;
     box-shadow: 1px 0.5px #888888;
     font-size: 18px;
+    box-sizing: border-box;
 }
 
 button {
