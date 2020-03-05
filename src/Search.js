@@ -24,7 +24,7 @@ class Search extends Component {
     };
 
     makeApiCall = (address, addressNumber) => {
-        const apiUrl = process.env.REACT_APP_API_URL || 'http://static.17.155.217.95.clients.your-server.de:3040';
+        const apiUrl = process.env.REACT_APP_API_URL || 'https://static.17.155.217.95.clients.your-server.de';
         const searchUrl = `${apiUrl}/routes?address=${address}&number=${addressNumber}`;
         fetch(searchUrl)
             .then(response => {
