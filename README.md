@@ -1,7 +1,7 @@
 # Risc Seismic Bucuresti Web
 
 
-To set the API url use the REACT_APP_API_URL (defaults to https://risc-seismic-bucuresti.herokuapp.com)
+To set the API url use the REACT_APP_API_URL (defaults to http://static.17.155.217.95.clients.your-server.de:3040)
 
 Run the app with
 ```
