@@ -34,17 +34,19 @@ class Search extends Component {
             .then(jsonData => {
                 this.setState({items: jsonData});
             }).catch(() => {
-                this.setState({error: true});
-            });
+            this.setState({error: true});
+        });
     };
 
     render() {
         return (
             <div id="main">
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={logo} className="App-logo" alt="logo"/>
                 <h1>Cautare rapida risc seismic Bucuresti</h1>
-                <p>Am investit fix 4 ore in proiectul asta. E departe de a fi perfect. Daca vad ca exista interes, mai investesc in el.</p>
-                <p>Pentru orice problema creati un tichet <a href="https://github.com/alexneamtu/risc-seismic-bucuresti-web/issues">aici</a></p>
+                <p>Am investit fix 4 ore in proiectul asta. E departe de a fi perfect. Daca vad ca exista interes, mai
+                    investesc in el.</p>
+                <p>Pentru orice problema creati un tichet <a
+                    href="https://github.com/alexneamtu/risc-seismic-bucuresti-web/issues">aici</a></p>
                 <br/>
                 <form onSubmit={this.handleSearch}>
                     <input
@@ -62,14 +64,14 @@ class Search extends Component {
                         placeholder="Numar"
                         value={this.state.addressNumber}
                     />
-                    <button onClick={this.handleSearch}>Cauta</button>
+                    <button onClick={this.handleSearch} disabled={!this.state.address}>Cauta</button>
                 </form>
 
                 <div id="no-results">
                     {!this.state.initial && !this.state.items.length ? 'Nu am gasit rezultate.' : ''}
                 </div>
                 <div id="error">
-                    {this.state.error? 'A aparut o problema. Incercati din nou.' : ''}
+                    {this.state.error ? 'A aparut o problema. Incercati din nou.' : ''}
                 </div>
                 <div id="items-container">
                     {this.state.items.map((item, index) => (
