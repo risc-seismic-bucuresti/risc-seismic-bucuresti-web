@@ -53,6 +53,7 @@ class Search extends Component {
                         placeholder="Adresa"
                         onChange={event => this.handleOnChange(event)}
                         value={this.state.address}
+                        required
                     />
                     <input
                         name="addressNumber"
