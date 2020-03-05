@@ -22,10 +22,11 @@ class Search extends Component {
     };
 
     makeApiCall = (address, addressNumber) => {
-        const searchUrl = `https://risc-seismic-bucuresti.herokuapp.com/routes?address=${address}&number=${addressNumber}`;
+        const apiUrl = process.env.REACT_APP_API_URL || 'https://risc-seismic-bucuresti.herokuapp.com';
+        const searchUrl = `${apiUrl}/routes?address=${address}&number=${addressNumber}`;
         fetch(searchUrl)
             .then(response => {
-                this.setState({initial: false})
+                this.setState({initial: false});
                 return response.json();
             })
             .then(jsonData => {
