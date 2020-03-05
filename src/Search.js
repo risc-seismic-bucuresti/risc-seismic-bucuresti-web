@@ -52,7 +52,6 @@ class Search extends Component {
             <div id="main">
                 <img src={logo} className="logo" alt="logo" />
                 <h1 className="title">Cautare rapida risc seismic Bucuresti</h1>
-                <p>Am investit fix <strike>4</strike> 5 ore in proiectul asta. E departe de a fi perfect. Daca vad ca exista interes, mai investesc in el.</p>
                 <p>Pentru orice problema creati un tichet <a href="https://github.com/alexneamtu/risc-seismic-bucuresti-web/issues">aici</a></p>
                 <br />
                 <form className="search-form" onSubmit={this.handleSearch}>
