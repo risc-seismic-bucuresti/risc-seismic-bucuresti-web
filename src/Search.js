@@ -28,6 +28,7 @@ class Search extends Component {
 
         const streetNumber = this.state.address.match(/\d/g)?.join('') || '';
         const streetName = this.state.address.replace(streetNumber, '').replace(/[^A-Za-z ]/g, '').trim();
+        console.log(this.state.address, streetName, streetNumber)
 
         this.makeApiCall(streetName, streetNumber);
     };
