@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/risc-seismic-bucuresti-web/static/css/main.ae500f7f.chunk.css",
-    "main.js": "/risc-seismic-bucuresti-web/static/js/main.8190afde.chunk.js",
-    "main.js.map": "/risc-seismic-bucuresti-web/static/js/main.8190afde.chunk.js.map",
-    "runtime-main.js": "/risc-seismic-bucuresti-web/static/js/runtime-main.0f2f4bdb.js",
-    "runtime-main.js.map": "/risc-seismic-bucuresti-web/static/js/runtime-main.0f2f4bdb.js.map",
-    "static/js/2.a0e70457.chunk.js": "/risc-seismic-bucuresti-web/static/js/2.a0e70457.chunk.js",
-    "static/js/2.a0e70457.chunk.js.map": "/risc-seismic-bucuresti-web/static/js/2.a0e70457.chunk.js.map",
-    "index.html": "/risc-seismic-bucuresti-web/index.html",
-    "precache-manifest.996dd690b3f56d9a7bf83b0670997c32.js": "/risc-seismic-bucuresti-web/precache-manifest.996dd690b3f56d9a7bf83b0670997c32.js",
-    "service-worker.js": "/risc-seismic-bucuresti-web/service-worker.js",
-    "static/css/main.ae500f7f.chunk.css.map": "/risc-seismic-bucuresti-web/static/css/main.ae500f7f.chunk.css.map",
-    "static/js/2.a0e70457.chunk.js.LICENSE.txt": "/risc-seismic-bucuresti-web/static/js/2.a0e70457.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/risc-seismic-bucuresti-web/static/media/logo.4612253a.svg",
-    "static/media/search.svg": "/risc-seismic-bucuresti-web/static/media/search.c93e3592.svg"
+    "main.css": "/static/css/main.ae500f7f.chunk.css",
+    "main.js": "/static/js/main.390b7f0d.chunk.js",
+    "main.js.map": "/static/js/main.390b7f0d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.682fcf5d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.682fcf5d.js.map",
+    "static/js/2.a0e70457.chunk.js": "/static/js/2.a0e70457.chunk.js",
+    "static/js/2.a0e70457.chunk.js.map": "/static/js/2.a0e70457.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.82c30bad74ad450911d5f6d770556d98.js": "/precache-manifest.82c30bad74ad450911d5f6d770556d98.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.ae500f7f.chunk.css.map": "/static/css/main.ae500f7f.chunk.css.map",
+    "static/js/2.a0e70457.chunk.js.LICENSE.txt": "/static/js/2.a0e70457.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/static/media/logo.4612253a.svg",
+    "static/media/search.svg": "/static/media/search.c93e3592.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0f2f4bdb.js",
+    "static/js/runtime-main.682fcf5d.js",
     "static/js/2.a0e70457.chunk.js",
     "static/css/main.ae500f7f.chunk.css",
-    "static/js/main.8190afde.chunk.js"
+    "static/js/main.390b7f0d.chunk.js"
   ]
 }
