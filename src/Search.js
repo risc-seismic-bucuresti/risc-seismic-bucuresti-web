@@ -27,7 +27,7 @@ class Search extends Component {
         e.preventDefault();
 
         const streetNumber = this.state.address.match(/\d/g)?.join('') || '';
-        const streetName = this.state.address.replace(streetNumber, '').replace(/[^A-Za-z ]/g, '').trim();
+        const streetName = this.state.address.replace(streetNumber, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
 
         this.makeApiCall(streetName, streetNumber);
     };
