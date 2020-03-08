@@ -32,7 +32,7 @@ class Search extends Component {
         action: 'Clicked Search'
       });
 
-      // const address = this.state.address.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+      const address = this.state.address.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
       // const addressArray = address.split(/[^\w-]+|_/);
 
       // let streetNumber = addressArray.pop();
@@ -42,7 +42,7 @@ class Search extends Component {
       //   streetNumber = '';
       // }
 
-      this.makeApiCall(this.state.address, this.state.addressNumber);
+      this.makeApiCall(address, this.state.addressNumber);
     };
 
     makeApiCall = (address, addressNumber) => {
@@ -121,7 +121,7 @@ class Search extends Component {
                   <Input
                     ref={(input) => { this.addrInput = input; }}
                     name="addressNumber"
-                    type="text"
+                    type="number"
                     placeholder="Ex: 28"
                     onChange={event => this.handleOnChange(event)}
                     value={this.state.addressNumber}
