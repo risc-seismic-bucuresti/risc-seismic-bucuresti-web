@@ -27,11 +27,11 @@ class Search extends Component {
         e.preventDefault();
 
         const address = this.state.address.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
-        const addressArray = address.split(/[^\w-]|_/);
+        const addressArray = address.split(/[^\w-]+|_/);
 
         let streetNumber = addressArray.pop();
         let streetName = addressArray.join(' ');
-        if (/.*d.*/.test(streetNumber)) {
+        if (!/\d/.test(streetNumber)) {
             streetName += ` ${streetNumber}`;
             streetNumber = '';
         }
