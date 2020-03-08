@@ -26,8 +26,15 @@ class Search extends Component {
     handleSearch = (e) => {
         e.preventDefault();
 
-        const streetNumber = this.state.address.match(/\d/g)?.join('') || '';
-        const streetName = this.state.address.replace(streetNumber, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+        const address = this.state.address.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+        const addressArray = address.split(/[^\w-]|_/);
+
+        let streetNumber = addressArray.pop();
+        let streetName = addressArray.join(' ');
+        if (/.*d.*/.test(streetNumber)) {
+            streetName += ` ${streetNumber}`;
+            streetNumber = '';
+        }
 
         this.makeApiCall(streetName, streetNumber);
     };
