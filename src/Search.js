@@ -85,7 +85,7 @@ class Search extends Component {
                     <div id="items-container">
                         {this.state.items.map((item, index) => (
                             <div className="single-item" key={index}>
-                                <h3>{item.street_type} {item.address}, {item.addressNumber}</h3>
+                                <h3>{item.streetType} {item.address}, {item.addressNumber}</h3>
                                 <p className="spaced">Incadrare: {item.buildingRatings[0].seismicRating}</p>
                                 <ul>
                                     <li>Actualizare: {new Intl.DateTimeFormat("ro-RO", {
