@@ -36,6 +36,8 @@
   },
   "homepage": "http://www.riscseismicbucuresti.ro/",
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
     "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1"
   }
