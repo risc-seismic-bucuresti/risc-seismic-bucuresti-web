@@ -6,10 +6,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^4.4.1",
     "react": "^16.13.0",
+    "react-bootstrap": "0.32.1",
     "react-dom": "^16.13.0",
+    "react-ga": "^2.7.0",
     "react-scripts": "3.4.0",
-    "react-bootstrap": "0.32.1"
+    "reactstrap": "^8.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,6 +39,8 @@
   },
   "homepage": "http://www.riscseismicbucuresti.ro/",
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
     "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1"
   }

@@ -1,0 +1,29 @@
+{
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "process": "readonly"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "semi": "error",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "indent": [
+      "error",
+      2
+    ]
+  }
+}
