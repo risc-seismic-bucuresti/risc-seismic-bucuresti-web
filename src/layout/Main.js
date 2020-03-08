@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
+import Navigation from './Navigation';
+import Footer from './Footer';
 import Search from '../components/search/Search';
-import Logo from '../components/logo/Logo';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-159909058-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class Main extends Component {
   render() {
     return (
-      <div id="main">
-        <Logo />
-        <p className="info">Pentru orice problema creati un tichet <a href="https://github.com/alexneamtu/risc-seismic-bucuresti-web/issues">aici</a></p>
-        <Search />
-      </div>
+      <>
+        <main role="main" id="main">
+          <Navigation />
+          <div  className="container">
+            <Search />
+          </div>
+        </main>
+        <Footer />
+      </>
     );
   }
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Search.scss';
-import searchIcon from './search.svg';
+import ReactGA from 'react-ga';
+
+import { Input, Button, FormGroup, Label } from 'reactstrap';
 
 class Search extends Component {
     state = {
@@ -25,17 +27,22 @@ class Search extends Component {
     handleSearch = (e) => {
       e.preventDefault();
 
-      const address = this.state.address.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
-      const addressArray = address.split(/[^\w-]+|_/);
+      ReactGA.event({
+        category: 'User',
+        action: 'Clicked Search'
+      });
 
-      let streetNumber = addressArray.pop();
-      let streetName = addressArray.join(' ');
-      if (!/\d/.test(streetNumber)) {
-        streetName += ` ${streetNumber}`;
-        streetNumber = '';
-      }
+      // const address = this.state.address.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+      // const addressArray = address.split(/[^\w-]+|_/);
 
-      this.makeApiCall(streetName, streetNumber);
+      // let streetNumber = addressArray.pop();
+      // let streetName = addressArray.join(' ');
+      // if (!/\d/.test(streetNumber)) {
+      //   streetName += ` ${streetNumber}`;
+      //   streetNumber = '';
+      // }
+
+      this.makeApiCall(this.state.address, this.state.addressNumber);
     };
 
     makeApiCall = (address, addressNumber) => {
@@ -56,18 +63,78 @@ class Search extends Component {
     render() {
       return (
         <div>
-          <form className="search-form" onSubmit={this.handleSearch}>
-            <input
-              ref={(input) => { this.addrInput = input; }}
-              name="address"
-              type="text"
-              placeholder="Ex: Regina Elisabeta 28"
-              onChange={event => this.handleOnChange(event)}
-              value={this.state.address}
-              required
-            />
-            <button onClick={this.handleSearch} disabled={!this.state.address}>Cauta</button>
-            <img src={searchIcon} alt="Search Icon" className="icon" />
+          <form className="search-form mt-5" onSubmit={this.handleSearch}>
+            {/* <div className="row">
+              <div className="col">
+                <InputGroup size="lg">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                  Strada
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                    ref={(input) => { this.addrInput = input; }}
+                    name="address"
+                    type="text"
+                    placeholder="Regina Elisabeta"
+                    onChange={event => this.handleOnChange(event)}
+                    value={this.state.address}
+                    required />
+                </InputGroup>
+              </div>
+              <div className="col-3">
+                <InputGroup size="lg">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      Numar
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                    ref={(input) => { this.addrInput = input; }}
+                    name="addressNumber"
+                    type="text"
+                    placeholder="28"
+                    onChange={event => this.handleOnChange(event)}
+                    value={this.state.addressNumber}
+                  />
+                </InputGroup>
+              </div>
+            </div> */}
+
+            <div className="row">
+              <div className="col">
+                <FormGroup>
+                  <Label for="exampleEmail">Strada</Label>
+                  <Input
+                    ref={(input) => { this.addrInput = input; }}
+                    name="address"
+                    type="text"
+                    placeholder="Ex: Regina Elisabeta"
+                    onChange={event => this.handleOnChange(event)}
+                    value={this.state.address}
+                    required />
+                </FormGroup>
+              </div>
+              <div className="col-3">
+                <FormGroup>
+                  <Label for="exampleEmail">Numar</Label>
+                  <Input
+                    ref={(input) => { this.addrInput = input; }}
+                    name="addressNumber"
+                    type="text"
+                    placeholder="Ex: 28"
+                    onChange={event => this.handleOnChange(event)}
+                    value={this.state.addressNumber}
+                  />
+                </FormGroup>
+              </div>
+            </div>
+
+            <div className="row mt-4 justify-content-center">
+              <div className="col-sm-12 col-md-3">
+                <Button block color="primary" size="lg" onClick={this.handleSearch} disabled={!this.state.address}>Cauta</Button>
+              </div>
+            </div>
           </form>
 
           <div id="no-results">
@@ -77,31 +144,34 @@ class Search extends Component {
             {this.state.error ? 'A aparut o problema. Incercati din nou.' : ''}
           </div>
           {this.state.items.length > 0 &&
-            <div id="items-container">
-              {this.state.items.map((item, index) => (
-                <div className="single-item" key={index}>
-                  <h3>{item.streetType} {item.address}, {item.addressNumber}</h3>
-                  <p className="spaced">Incadrare: {item.buildingRatings[0].seismicRating}</p>
-                  <ul>
-                    <li>Actualizare: {new Intl.DateTimeFormat('ro-RO', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: '2-digit'
-                    }).format(new Date(item.updatedAt))}</li>
-                    <li>Sector: {item.district}</li>
-                    <li>Numar apartamente: {item.apartmentNumber}</li>
-                    <li>Regim inaltime: {item.heightRegime}</li>
-                    <li>An constructie: {item.yearOfConstruction}</li>
-                    <li>An expertiza: {item.yearOfExpertise}</li>
-                    <li>Expertizat de: {item.expertName}</li>
-                    <li>Suprafata: {item.surfaceSize}</li>
-                    {item.comments &&
-                      <li>Comentarii: {item.comments}</li>
-                    }
-                  </ul>
-                </div>
-              ))}
-            </div>
+            <>
+              <h3>Rezultate: {this.state.items.length}</h3>
+              <div id="items-container">
+                {this.state.items.map((item, index) => (
+                  <div className="single-item" key={index}>
+                    <h3>{item.streetType} {item.address}, {item.addressNumber}</h3>
+                    <p className="spaced">Incadrare: {item.buildingRatings[0].seismicRating}</p>
+                    <ul>
+                      <li>Actualizare: {new Intl.DateTimeFormat('ro-RO', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: '2-digit'
+                      }).format(new Date(item.updatedAt))}</li>
+                      <li>Sector: {item.district}</li>
+                      <li>Numar apartamente: {item.apartmentNumber}</li>
+                      <li>Regim inaltime: {item.heightRegime}</li>
+                      <li>An constructie: {item.yearOfConstruction}</li>
+                      <li>An expertiza: {item.yearOfExpertise}</li>
+                      <li>Expertizat de: {item.expertName}</li>
+                      <li>Suprafata: {item.surfaceSize}</li>
+                      {item.comments &&
+                        <li>Comentarii: {item.comments}</li>
+                      }
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </>
           }
         </div>
       );
