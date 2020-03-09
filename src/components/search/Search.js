@@ -64,43 +64,6 @@ class Search extends Component {
       return (
         <div>
           <form className="search-form mt-5" onSubmit={this.handleSearch}>
-            {/* <div className="row">
-              <div className="col">
-                <InputGroup size="lg">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                  Strada
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input
-                    ref={(input) => { this.addrInput = input; }}
-                    name="address"
-                    type="text"
-                    placeholder="Regina Elisabeta"
-                    onChange={event => this.handleOnChange(event)}
-                    value={this.state.address}
-                    required />
-                </InputGroup>
-              </div>
-              <div className="col-3">
-                <InputGroup size="lg">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      Numar
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input
-                    ref={(input) => { this.addrInput = input; }}
-                    name="addressNumber"
-                    type="text"
-                    placeholder="28"
-                    onChange={event => this.handleOnChange(event)}
-                    value={this.state.addressNumber}
-                  />
-                </InputGroup>
-              </div>
-            </div> */}
-
             <div className="row">
               <div className="col">
                 <FormGroup>
@@ -132,7 +95,7 @@ class Search extends Component {
 
             <div className="row mt-4 justify-content-center">
               <div className="col-sm-12 col-md-3">
-                <Button block color="primary" size="lg" onClick={this.handleSearch} disabled={!this.state.address}>Cauta</Button>
+                <Button block color="primary" size="lg" type="submit" onClick={this.handleSearch} disabled={!this.state.address}>Cauta</Button>
               </div>
             </div>
           </form>
