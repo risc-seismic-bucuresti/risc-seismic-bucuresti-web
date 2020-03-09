@@ -4,10 +4,18 @@ import Footer from './Footer';
 import Search from '../components/search/Search';
 import ReactGA from 'react-ga';
 
-ReactGA.initialize('UA-159909058-1');
-ReactGA.pageview(window.location.pathname + window.location.search);
+import CC from '../components/cookie/CookieConsent';
 
 class Main extends Component {
+
+  componentDidMount() {
+    // This needs refactoring
+    if (document.cookie.split(';').filter((item) => item.includes('rcl_statistics_consent=true')).length) {
+      ReactGA.initialize('UA-159909058-1');
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+  }
+
   render() {
     return (
       <>
@@ -18,6 +26,7 @@ class Main extends Component {
           </div>
         </main>
         <Footer />
+        <CC />
       </>
     );
   }

@@ -27,21 +27,14 @@ class Search extends Component {
     handleSearch = (e) => {
       e.preventDefault();
 
-      ReactGA.event({
-        category: 'User',
-        action: 'Clicked Search'
-      });
+      if (document.cookie.split(';').filter((item) => item.includes('rcl_statistics_consent=true')).length) {
+        ReactGA.event({
+          category: 'User',
+          action: 'Clicked Search'
+        });
+      }
 
       const address = this.state.address.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
-      // const addressArray = address.split(/[^\w-]+|_/);
-
-      // let streetNumber = addressArray.pop();
-      // let streetName = addressArray.join(' ');
-      // if (!/\d/.test(streetNumber)) {
-      //   streetName += ` ${streetNumber}`;
-      //   streetNumber = '';
-      // }
-
       this.makeApiCall(address, this.state.addressNumber);
     };
 

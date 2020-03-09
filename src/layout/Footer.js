@@ -23,6 +23,7 @@ const Footer = () => {
           <Button color="link" onClick={togglePrivacy}>Confidentialitate</Button>
         </div>
       </div>
+      {/* TODO: Terms and Policy need to have their own static pages */}
       <Modal isOpen={termsModal} toggle={toggleTerms} size="lg">
         <ModalHeader toggle={toggleTerms}>Termeni si Conditii</ModalHeader>
         <ModalBody>
