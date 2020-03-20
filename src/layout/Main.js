@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import Search from '../components/search/Search';
+import Terms from '../components/static/Terms';
+import Privacy from '../components/static/Privacy';
+import NotFound from '../components/static/NotFound';
+import CC from '../components/cookie/CookieConsent';
 import ReactGA from 'react-ga';
 
-import CC from '../components/cookie/CookieConsent';
+import cookies from '../services/cookieService';
 
 class Main extends Component {
 
   componentDidMount() {
-    // This needs refactoring
-    if (document.cookie.split(';').filter((item) => item.includes('rcl_statistics_consent=true')).length) {
+    if (cookies.checkCookieValue('rcl_statistics_consent', true)) {
       ReactGA.initialize('UA-159909058-1');
       ReactGA.pageview(window.location.pathname + window.location.search);
     }
@@ -21,8 +25,16 @@ class Main extends Component {
       <>
         <main role="main" id="main">
           <Navigation />
-          <div  className="container">
-            <Search />
+          <div className="container mt-5">
+            <Switch>
+              <Route exact path="/" component={Search} />
+              <Route exact path="/terms" component={Terms} />
+              <Route exact path="/privacy-policy" component={Privacy} />
+              {/* 404 */}
+              <Route path="*">
+                <NotFound />
+              </Route>
+            </Switch>
           </div>
         </main>
         <Footer />

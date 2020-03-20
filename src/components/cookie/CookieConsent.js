@@ -8,7 +8,7 @@ const CookieConsent = () => {
       <CookieBanner
         className="cookie-banner"
         privacyPolicyLinkText="Confidentialitate"
-        message="This site or third party tools used by this site makes use of cookies necessary for the operation and are useful for the purposes outlined in the privacy policy. To learn more, see the privacy policy. By accepting you consent to the use of cookies."
+        message="Folosim Tehnologii de tip Cookie ce permit stocarea de informații și/sau obținerea accesului la informația stocată în dispozitivul dumneavoastră pentru a permite website-ului să funcționeze, pentru a personaliza conținutul și anunțurile publicitare, pentru a vă oferi funcționalități aferente rețelelor de socializare și pentru a analiza traficul. Prin click pe ACCEPT, acceptați folosirea tuturor Tehnologiilor de tip Cookie."
         onAccept = {() => {}}
         onAcceptPreferences = {() => {}}
         onAcceptStatistics = {() => {}}
