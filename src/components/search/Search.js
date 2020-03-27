@@ -54,7 +54,7 @@ class Search extends Component {
           return response.json();
         })
         .then(jsonData => {
-          this.setState({ items: jsonData });
+          this.setState({ items: jsonData.results });
         }).catch(() => {
           this.setState({ error: true });
         });
@@ -112,23 +112,23 @@ class Search extends Component {
               <div id="items-container">
                 {this.state.items.map((item, index) => (
                   <div className="single-item" key={index}>
-                    <h3>{item.streetType} {item.address}, {item.addressNumber}</h3>
-                    <p className="spaced">Incadrare: {item.buildingRatings[0].seismicRating}</p>
+                    <h3>{item.building.streetType} {item.building.address}, {item.building.addressNumber}</h3>
+                    <p className="spaced">Incadrare: {item.building.buildingRatings[0].seismicRating}</p>
                     <ul>
                       <li>Actualizare: {new Intl.DateTimeFormat('ro-RO', {
                         year: 'numeric',
                         month: 'long',
                         day: '2-digit'
-                      }).format(new Date(item.updatedAt))}</li>
-                      <li>Sector: {item.district}</li>
-                      <li>Numar apartamente: {item.apartmentNumber}</li>
-                      <li>Regim inaltime: {item.heightRegime}</li>
-                      <li>An constructie: {item.yearOfConstruction}</li>
-                      <li>An expertiza: {item.yearOfExpertise}</li>
-                      <li>Expertizat de: {item.expertName}</li>
-                      <li>Suprafata: {item.surfaceSize}</li>
-                      {item.comments &&
-                        <li>Comentarii: {item.comments}</li>
+                      }).format(new Date(item.building.updatedAt))}</li>
+                      <li>Sector: {item.building.district}</li>
+                      <li>Numar apartamente: {item.building.apartmentNumber}</li>
+                      <li>Regim inaltime: {item.building.heightRegime}</li>
+                      <li>An constructie: {item.building.yearOfConstruction}</li>
+                      <li>An expertiza: {item.building.yearOfExpertise}</li>
+                      <li>Expertizat de: {item.building.expertName}</li>
+                      <li>Suprafata: {item.building.surfaceSize}</li>
+                      {item.building.comments &&
+                        <li>Comentarii: {item.building.comments}</li>
                       }
                     </ul>
                   </div>
