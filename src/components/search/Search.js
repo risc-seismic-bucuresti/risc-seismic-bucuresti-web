@@ -50,7 +50,7 @@ class Search extends Component {
           return response.json();
         })
         .then(jsonData => {
-          this.setState({ items: jsonData });
+          this.setState({ items: jsonData.results });
         }).catch(() => {
           this.setState({ error: true });
         });
@@ -86,7 +86,7 @@ class Search extends Component {
                         ref={(input) => { this.addrInput = input; }}
                         name="addressNumber"
                         type="number"
-                        placeholder="Ex: 28"
+                        placeholder="Ex: 55"
                         onChange={event => this.handleOnChange(event)}
                         value={this.state.addressNumber}
                       />
