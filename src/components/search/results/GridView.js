@@ -29,6 +29,7 @@ const GridView = ({ items }) => {
                   <li>Comentarii: {item.building.comments}</li>
               }
             </ul>
+            <a href={'https://www.google.com/maps/search/?api=1&query=' + item.building.gpsCoordinatesLatitude + ' , ' + item.building.gpsCoordinatesLongitude } target="_blank" rel="noopener noreferrer">Vezi harta</a>
           </CardBody>
         </Card>
       ))}
