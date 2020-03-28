@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './Search.scss';
-import ResultList from './ResultList';
-import BackgroundAnimation from '../static/background-animation/BackgroundAnimation';
+import ResultList from './results/ResultList';
+// import BackgroundAnimation from '../static/background-animation/BackgroundAnimation';
 import ReactGA from 'react-ga';
 
-import { Input, Button, FormGroup, Label } from 'reactstrap';
+import { Input, Button, FormGroup, Label, Spinner } from 'reactstrap';
 import cookies from '../../services/cookieService';
 
 class Search extends Component {
@@ -14,6 +14,7 @@ class Search extends Component {
       items: [],
       initial: true,
       error: false,
+      // isLoading: true
     };
 
     componentDidMount() {
@@ -42,6 +43,7 @@ class Search extends Component {
     };
 
     makeApiCall = (address, addressNumber) => {
+      // this.setState({isLoading: true});
       const apiUrl = process.env.REACT_APP_API_URL || 'https://static.17.155.217.95.clients.your-server.de';
       const searchUrl = `${apiUrl}/routes?address=${address}&number=${addressNumber}`;
       fetch(searchUrl)
@@ -53,18 +55,20 @@ class Search extends Component {
           this.setState({ items: jsonData.results });
         }).catch(() => {
           this.setState({ error: true });
+        }).finally(() => {
+          // this.setState({isLoading: false});
         });
     };
 
     render() {
       return (
         <>
-          <BackgroundAnimation />
+          {/* <BackgroundAnimation /> */}
           <div className="jumbotron jumbotron-fluid search-jumbotron">
             <div className="container">
-              <h1>Cauta informatii legate de imobilele aflate pe listele de risc seismic</h1>
-              <p className="mt-5 mb-5">România este o ţară cu potenţial seismic ridicat, aspect evidenţiat de studiile de hazard seismic şi de prevederile codului de proiectare seismică P100. Practic, în orice moment se poate produce un cutremur cu magnitudine mai mare de 7 în Zona Seismică Vrancea, la adâncimi între 60 şi 180 km. Şi această zonă nu este singura în care pot avea loc cutremure cu potenţial distructiv.</p>
-              <form className="search-form" onSubmit={this.handleSearch}>
+              <h2>Cauta informatii legate de imobilele cu potential risc seismic</h2>
+              <p className="my-md-5 my-3">Esti in cautarea unei locuinte noi? Te preocupa siguranta ta si a familiei tale? Poate esti doar curios in ceea ce priveste rezistenta imobilelor din Bucuresti? Intrebarile frecvente pe care si le pun locuitorii unui oras cu potential risc seismic sunt pe cale sa primeasca raspuns. Afla rapid si usor, completand campul de mai jos, daca imobilul care ti-a atras atentia este incadrat pe listele de risc seismic intocmite si actualizate de catre autoritatile publice.</p>
+              <form className="search-form mb-3" onSubmit={this.handleSearch}>
                 <div className="row">
                   <div className="col">
                     <FormGroup>
@@ -101,15 +105,18 @@ class Search extends Component {
                 </div>
               </form>
 
-              <div id="no-results">
-                {!this.state.initial && !this.state.items.length ? 'Cladirea nu se afla pe lista de risc seismic.' : ''}
+              <div id="no-results" className="text-success text-center">
+                <h4>{!this.state.initial && !this.state.items.length ? 'Cladirea nu se afla pe lista de risc seismic.' : ''}</h4>
               </div>
-              <div id="error">
+              <div id="error" className="text-danger">
                 {this.state.error ? 'A aparut o problema. Incercati din nou.' : ''}
               </div>
               {this.state.items.length > 0 &&
-            <ResultList items={this.state.items} />
+                <ResultList items={this.state.items} />
               }
+              <div className="d-none justify-content-center">
+                <Spinner color="primary" /> <Spinner color="primary" /> <Spinner color="primary" />
+              </div>
             </div>
           </div>
         </>

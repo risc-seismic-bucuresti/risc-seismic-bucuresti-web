@@ -25,7 +25,7 @@ class Main extends Component {
       <>
         <main role="main" id="main">
           <Navigation />
-          <div className="container mt-5">
+          <div className="container mt-0 mt-md-5">
             <Switch>
               <Route exact path="/" component={Search} />
               <Route exact path="/terms" component={Terms} />
