@@ -1,27 +1,19 @@
 // npm
-import * as React from 'react';
-import { Component } from 'react';
 import { LatLng, LatLngBounds } from 'leaflet';
+import React, { useEffect, useState } from 'react'
 import { Map, TileLayer, CircleMarker, Popup } from 'react-leaflet';
 
 // styling
 import './Map.scss';
 
-export default class MapComponent extends Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      lat: 44.4355,
-      lng: 26.1025,
-      zoom: 20,
-      markers: []
-    };
-    this.allMarkers = null;
-    this.mapRef = React.createRef();
-    this.displayMarkers = this.displayMarkers.bind(this);
-  }
+export default function MapComponent() {
+  const zoom = 20;
 
-  async makeApiCall () {
+  const [allMarkers, setAllMarkers] = useState(null);
+  const [mapRef] = useState(React.createRef());
+  const [markers, setMarkers] = useState([]);
+
+  const makeApiCall = async () => {
     const apiUrl = process.env.REACT_APP_API_URL || 'https://static.17.155.217.95.clients.your-server.de';
     const searchUrl = `${apiUrl}/routes?minLat=40&maxLat=50&minLong=20&maxLong=30`;
     try {
@@ -40,26 +32,16 @@ export default class MapComponent extends Component {
     }
   }
 
-  async componentDidMount () {
-    const southWest = new LatLng(44.4345, 26.1015),
-      northEast = new LatLng(44.4365, 26.1035),
-      bounds = new LatLngBounds(southWest, northEast);
-    this.allMarkers = await this.makeApiCall(bounds);
-    this.displayMarkers();
-  }
-
-  displayMarkers () {
-    const map = this.mapRef.current.leafletElement;
-    if (this.allMarkers) {
-      const markers = this.allMarkers.filter(m => map.getBounds().contains(m.coordinates));
-      this.setState({
-        markers: markers
-      });
+  const displayMarkers = () => {
+    const map = mapRef.current.leafletElement;
+    if (allMarkers) {
+      const markers = allMarkers.filter(m => map.getBounds().contains(m.coordinates));
+      setMarkers(prepareMarkers(markers));
     }
   }
 
-  render () {
-    const markers = this.state.markers.map((item) => (
+  const prepareMarkers = (markers) => {
+    return markers.map((item) => (
       <CircleMarker key={item.details.id} center={item.coordinates} className={`marker-${item.rating.toLowerCase()}`}>
         <Popup>
           <strong>{item.details.streetType} {item.details.address}, {item.details.addressNumber}</strong>
@@ -84,17 +66,29 @@ export default class MapComponent extends Component {
         </Popup>
       </CircleMarker>
     ));
-    return (
-      <Map
-        onMoveEnd={this.displayMarkers}
-        preferCanvas={false}
-        ref={this.mapRef}
-        center={new LatLng(44.4355, 26.1025)}
-        zoom={this.state.zoom}
-      >
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
-        {markers}
-      </Map>
-    );
   }
+
+  useEffect(() => {
+    (async function() {
+      try {
+        const bounds = new LatLngBounds(new LatLng(44.4345, 26.1015), new LatLng(44.4365, 26.1035));
+        setAllMarkers(await makeApiCall(bounds));
+        displayMarkers();
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  });
+
+  return (
+    <Map
+      onMoveEnd={displayMarkers}
+      preferCanvas={false}
+      ref={mapRef}
+      center={new LatLng(44.4355, 26.1025)}
+      zoom={zoom}>
+      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+      {markers}
+    </Map>
+  );
 }

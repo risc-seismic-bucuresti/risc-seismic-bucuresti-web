@@ -1,7 +1,12 @@
+// npm
 import React from 'react';
+
+// styling
 import logo from './rsb_logo_centered.png';
 import './logo.scss';
 
-const Logo = () => <img src={logo} className="logo" alt="Logo" />;
-
-export default Logo;
+export default function LogoComponent() {
+  return (
+    <img src={logo} className="logo" alt="Logo" />
+  );
+}

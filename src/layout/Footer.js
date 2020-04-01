@@ -1,8 +1,9 @@
+// npm
 import React from 'react';
 import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-const Footer = () => {
+export default function FooterComponent() {
   return (
     <footer className="footer">
       <div className="container clearfix">
@@ -20,6 +21,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
