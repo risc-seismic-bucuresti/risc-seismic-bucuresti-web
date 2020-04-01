@@ -1,0 +1,54 @@
+.leaflet-container {
+  width: 100%;
+  height: 100vh;
+
+  .marker-rs1 {
+    stroke: #dc1c13 !important;
+    fill: #dc1c13 !important;;
+  }
+
+  .marker-rs2 {
+    stroke: #ea4c46 !important;;
+    fill: #ea4c46 !important;;
+  }
+
+  .marker-rs3 {
+    stroke: #f07470 !important;;
+    fill: #f07470 !important;;
+  }
+
+  .marker-rs4 {
+    stroke: #f1959b !important;;
+    fill: #f1959b !important;;
+  }
+
+  .marker-u1 {
+    stroke: #ff6200 !important;;
+    fill: #ff6200 !important;;
+  }
+
+  .marker-u2 {
+    stroke: #fd9346 !important;;
+    fill: #fd9346 !important;;
+  }
+
+  .marker-u3 {
+    stroke: #fdb777 !important;;
+    fill: #fdb777 !important;;
+  }
+
+  .marker-urgenta {
+    stroke: #ff6200 !important;;
+    fill: #ff6200 !important;;
+  }
+
+  .marker-consolidat {
+    stroke: #008000 !important;;
+    fill: #008000 !important;;
+  }
+
+  .marker-neclasificat {
+    stroke: #000000 !important;;
+    fill: #000000 !important;;
+  }
+}

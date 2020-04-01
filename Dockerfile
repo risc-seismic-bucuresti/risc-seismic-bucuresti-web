@@ -1,9 +1,9 @@
 FROM node:latest
 
 ADD package.json /tmp/package.json
-ADD yarn.lock /tmp/yarn.lock
+ADD package-lock.json /tmp/package-lock.json
 
-RUN cd /tmp && yarn install -s && \
+RUN cd /tmp && npm install -s && \
     mkdir -p /code && cp -a /tmp/node_modules /code/
 
 COPY . /code

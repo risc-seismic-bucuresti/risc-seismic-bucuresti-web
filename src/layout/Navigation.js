@@ -24,6 +24,7 @@ const Navigation = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
           </Nav>
+          <NavLink href="map">Harta cladiri</NavLink>
           <NavLink target="_blank" href="https://github.com/alexneamtu/risc-seismic-bucuresti-web/issues">Raporteaza bug</NavLink>
         </Collapse>
       </div>
