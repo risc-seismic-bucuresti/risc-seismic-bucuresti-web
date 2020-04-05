@@ -1,8 +1,11 @@
-import React from 'react';
+// npm
 import { CookieBanner } from '@palmabit/react-cookie-law';
+import React from 'react';
+
+// styling
 import './cookie.scss';
 
-const CookieConsent = () => {
+export default function CookieConsent() {
   return (
     <>
       <CookieBanner
@@ -16,6 +19,4 @@ const CookieConsent = () => {
       />
     </>
   );
-};
-
-export default CookieConsent;
+}
