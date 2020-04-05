@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ab60425.chunk.css",
-    "main.js": "/static/js/main.6afb3a75.chunk.js",
-    "main.js.map": "/static/js/main.6afb3a75.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.27ae1f84.js",
-    "runtime-main.js.map": "/static/js/runtime-main.27ae1f84.js.map",
-    "static/js/2.dcbeb586.chunk.js": "/static/js/2.dcbeb586.chunk.js",
-    "static/js/2.dcbeb586.chunk.js.map": "/static/js/2.dcbeb586.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.c96a2aad3351024b5d700b47027b8afd.js": "/precache-manifest.c96a2aad3351024b5d700b47027b8afd.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.5ab60425.chunk.css.map": "/static/css/main.5ab60425.chunk.css.map",
-    "static/js/2.dcbeb586.chunk.js.LICENSE.txt": "/static/js/2.dcbeb586.chunk.js.LICENSE.txt",
-    "static/media/rsb_logo_centered.png": "/static/media/rsb_logo_centered.a51689e9.png"
+    "main.css": "https://riscseismicbucuresti.ro/static/css/main.5ab60425.chunk.css",
+    "main.js": "https://riscseismicbucuresti.ro/static/js/main.a4595862.chunk.js",
+    "main.js.map": "https://riscseismicbucuresti.ro/static/js/main.a4595862.chunk.js.map",
+    "runtime-main.js": "https://riscseismicbucuresti.ro/static/js/runtime-main.86570174.js",
+    "runtime-main.js.map": "https://riscseismicbucuresti.ro/static/js/runtime-main.86570174.js.map",
+    "static/js/2.dcbeb586.chunk.js": "https://riscseismicbucuresti.ro/static/js/2.dcbeb586.chunk.js",
+    "static/js/2.dcbeb586.chunk.js.map": "https://riscseismicbucuresti.ro/static/js/2.dcbeb586.chunk.js.map",
+    "index.html": "https://riscseismicbucuresti.ro/index.html",
+    "precache-manifest.fdbac19e55f08170a94cedddcaa7f853.js": "https://riscseismicbucuresti.ro/precache-manifest.fdbac19e55f08170a94cedddcaa7f853.js",
+    "service-worker.js": "https://riscseismicbucuresti.ro/service-worker.js",
+    "static/css/main.5ab60425.chunk.css.map": "https://riscseismicbucuresti.ro/static/css/main.5ab60425.chunk.css.map",
+    "static/js/2.dcbeb586.chunk.js.LICENSE.txt": "https://riscseismicbucuresti.ro/static/js/2.dcbeb586.chunk.js.LICENSE.txt",
+    "static/media/rsb_logo_centered.png": "https://riscseismicbucuresti.ro/static/media/rsb_logo_centered.a51689e9.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.27ae1f84.js",
+    "static/js/runtime-main.86570174.js",
     "static/js/2.dcbeb586.chunk.js",
     "static/css/main.5ab60425.chunk.css",
-    "static/js/main.6afb3a75.chunk.js"
+    "static/js/main.a4595862.chunk.js"
   ]
 }
