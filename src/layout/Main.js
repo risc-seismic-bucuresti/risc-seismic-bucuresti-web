@@ -32,7 +32,7 @@ export default function MainComponent () {
         <div className="container mt-0 mt-md-5">
           <Switch>
             <Route exact path="/" component={Search}/>
-            <Route exact path="/map" component={Map}/>
+            <Route exact path="/risk-map" component={Map}/>
             <Route exact path="/terms" component={Terms}/>
             <Route exact path="/privacy-policy" component={Privacy}/>
             {/* 404 */}

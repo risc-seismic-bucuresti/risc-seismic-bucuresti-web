@@ -28,7 +28,7 @@ export default function Navigation() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
           </Nav>
-          <Link to="/map">Harta cladiri</Link>
+          <Link to="/risk-map">Harta cladiri</Link>
           <NavLink target="_blank" href="https://github.com/alexneamtu/risc-seismic-bucuresti-web/issues">Raporteaza bug</NavLink>
         </Collapse>
       </div>
