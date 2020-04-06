@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9810bb5b22a10795b21d00584764a191",
+    "revision": "b6fe2ef9c435686626dda50a26c85d0c",
     "url": "https://riscseismicbucuresti.ro/index.html"
   },
   {
-    "revision": "9c51333e15c4001fa092",
+    "revision": "6ee5611354fa005365dc",
     "url": "https://riscseismicbucuresti.ro/static/css/main.5ab60425.chunk.css"
   },
   {
-    "revision": "66296696c1634add28d7",
-    "url": "https://riscseismicbucuresti.ro/static/js/2.dcbeb586.chunk.js"
+    "revision": "ac38706c18877ce8cb7c",
+    "url": "https://riscseismicbucuresti.ro/static/js/2.c9db7a02.chunk.js"
   },
   {
     "revision": "effad757c3115357d544dd61ee14fd10",
-    "url": "https://riscseismicbucuresti.ro/static/js/2.dcbeb586.chunk.js.LICENSE.txt"
+    "url": "https://riscseismicbucuresti.ro/static/js/2.c9db7a02.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9c51333e15c4001fa092",
-    "url": "https://riscseismicbucuresti.ro/static/js/main.a4595862.chunk.js"
+    "revision": "6ee5611354fa005365dc",
+    "url": "https://riscseismicbucuresti.ro/static/js/main.51fcc987.chunk.js"
   },
   {
     "revision": "8f8ac670b2dc2dd5df8f",
