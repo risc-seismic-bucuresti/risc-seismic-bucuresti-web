@@ -29,7 +29,7 @@ export default function Navigation() {
           <Nav className="mr-auto" navbar>
           </Nav>
           <Link to="/risk-map">Harta cladiri</Link>
-          <NavLink target="_blank" href="https://github.com/alexneamtu/risc-seismic-bucuresti-web/issues">Raporteaza bug</NavLink>
+          <NavLink target="_blank" href="https://github.com/risc-seismic-bucuresti/risc-seismic-bucuresti-web/issues">Raporteaza bug</NavLink>
         </Collapse>
       </div>
     </Navbar>
